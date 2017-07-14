@@ -4,6 +4,9 @@
 \usepackage{booktabs} 
 \usepackage{tabularx}
 \usepackage{caption}
+\usepackage{gb4e}
+
+\noautomath
 
 \captionsetup[table]{}
 
@@ -29,7 +32,7 @@ Research suggests that the way that people explain things that happen in their l
 A consistently pessimistic \emph{explanatory style}, for example, can help indicate depression.
 The ability to detect these explanations, and consequently describe a person's explanatory style, is therefore a valuable skill for therapy-minded Companionbots since it lets them know when and about what to start a therapeutic dialogue.
 
-\section{Event Attribution Units}
+\section{Event Attribution Units (EAUs)}
 In order to describe a person's explanatory style, we need a sample of how they explain things that happen to them (particularly things about which the person has a non-neutral opinion). % TODO: briefly describe CAVE analysis and difference from questionnaire
 This sample is made up of a set of \emph{event-attribution units}\footnote{\label{CAVE}appendix of CAVE paper, with guidelines} (EAUs) and some descriptive features about them. % TODO: citation needed
 EAUs are the conjunction of an \emph{event} and an \emph{attribution} that explains the existence of the event.
@@ -67,7 +70,7 @@ Some definitions:
 
 \pagebreak
 \subsection{Attributions}
-\subsection{Summary}
+\subsection{Examples}
 
 (...) He then goes on to give examples of good \emph{event-attribution units}: % TODO: reproduce examples
 \setcounter{magicrownumbers}{0}
@@ -87,58 +90,23 @@ Some definitions:
 
 %I want to refer to example \ref{table1}.\ref{ex_grad_prog} %example_graduate_program
 
-\section{Analyzing EAUs}
+\section{Analyzing EAU dimensions}
     \subsection{Personal v. External}
     \subsection{Permanent v. Temporary}
     \subsection{Pervasive v. Specific}
-    \subsection{Summary}
+    \subsection{Examples}
 
 \pagebreak
 \section{Annotating Event-Attribution Units and their Features}
-    For \textbf{every \emph{event} annotation}:
-        \begin{enumerate}
-            \item The \emph{event} must have been mentioned during the given conversation.
-            \item The \emph{event} must have been expressed by means of a complete sentence within the conversation.
-            \item The text span that expresses the \emph{event} must be in the form of a complete sentence or otherwise \emph{corefer} with a complete sentence present in the transcript expressing such event.
-            \item The text span that expresses the \emph{event} must \emph{propose} that \emph{event} and nothing else. % TODO: give examples as reasons
-            \item Experience of the \emph{event} by the participant must not rely solely on a generic statement.
-                e.g. not ``Teachers often feel stressed'' even if the individual is in fact a teacher.
-            \item The text span expressing the \emph{event} must be the minimal length necessary to satisfy all other conditions.
-        \end{enumerate}
 
-    For \textbf{every \emph{attribution} annotation}:
-        \begin{enumerate}
-            \item The \emph{attribution} must have been mentioned during conversation.
-            \item The \emph{attribution} must have been expressed with a complete sentence spoken in conversation.
-            \item The \emph{attribution} must be in the form of a complete sentence or otherwise corefer with a complete sentence present in the transcript expressing such event.
-            \item The \emph{attribution} must \emph{propose} an \emph{event}.
-            \item The form of the \emph{event} must be essentially similar to that of some expression of the \emph{proposition} of that \emph{event}. % TODO: give examples as reasons
-            \item The individual is not determined to have experienced the event solely by means of a generic statement. e.g. not ``Teachers often feel stressed'' even when the individual is a teacher.
-            \item \emph{Events} must be the minimal length necessary to satisfy all other given conditions.
-        \end{enumerate}
-
-    For \textbf{every annotation} made:
-        \begin{enumerate}
-            \item \textbf{Annotations may be non-contiguous}.
-                \begin{enumerate}
-                \item Use \emph{annotation}\texttt{\_continuation}, replacing \emph{annotation} with the type name of the continued annotation, e.g. \texttt{Event\_continutation}.
-                \item Annotation continuations must not be interrupted by a complete annotation of the same type.
-                \end{enumerate}
-        \end{enumerate}
-
-    \subsection{Phase 1A: Event spans}
+    \subsection{Annotation Phases}
+    \subsubsection{Phase 1: Event spans}
     For every EAU identified:
         \begin{enumerate}
             \item Annotate text span of the event as type \texttt{Event}.
         \end{enumerate}
 
-    \subsection{Phase 1B: Event polarity}
-    For every event annotation within the given consensus set:
-        \begin{enumerate}
-            \item Annotate the polarity of the event as a feature, \texttt{Polarity}, with a value of either \texttt{Postive} or \texttt{Negative}.
-        \end{enumerate}
-
-    \subsection{Phase 2: Attribution spans}
+    \subsubsection{Phase 2: Attribution spans}
     For every event within the given consensus set:
         \begin{enumerate}
             \item Annotate text span of the associated attribution as type \texttt{Attribution}.
@@ -146,11 +114,57 @@ Some definitions:
                     \item Annotate the identification number of the associated event as a feature, \texttt{Caused\_Event\_ID}.
                 \end{enumerate}
         \end{enumerate}
-    \subsection{Phase 3: Attribution dimensionality}
+    \subsubsection{Phase 3: Attribution dimensionality}
     For every attribution within the given consensus set:
         \begin{enumerate}
             \item Annotate values for each of the three dimensions as features, \texttt{Personal--External}, \texttt{Permanent--Temporary}, \texttt{Pervasive--Specific}, each with a digit betwen \texttt{1} and \texttt{7}.
         \end{enumerate}
 
+    \newpage
+    \subsection{Annotation conditions}
+    \subsubsection{Events}
+    For every \textbf{\emph{event}} annotation:
+        \begin{enumerate}
+            \item The \emph{event} must have been mentioned during the given conversation.
+            \item The event must have been or otherwise be very probable to have been evaluated as either good or bad by subject in terms of its effects on the subject.
+            \item The \emph{event} must have been expressed by means of a complete sentence within the conversation.
+            \item The text span that expresses the \emph{event} must be in the form of a complete sentence or otherwise \emph{corefer} with a complete sentence present in the transcript expressing such event.
+            \item The text span that expresses the \emph{event} must primarily \emph{propose} that event. %...", and nothing else."? % TODO: give examples as reasons
+            \item Experience of the \emph{event} by the participant must not rely solely on a generic statement.
+                e.g. not ``Teachers often feel stressed'' even if the individual is in fact a teacher.
+            \item The text span expressing the \emph{event} must be the minimal length necessary to satisfy all other conditions.
+        \end{enumerate}
+
+
+    \subsubsection{Attributions}
+    For every \textbf{\emph{attribution}} annotation:
+        \begin{enumerate}
+            \item The \emph{attribution} must have been mentioned during conversation.
+            \item \emph{Events} must be the minimal length necessary to satisfy all other given conditions.
+        \end{enumerate}
+
+
+    \subsubsection{All annotations}
+    For \textbf{every annotation} made:
+        \begin{enumerate}
+            \item Annotations may be non-contiguous.
+                \begin{enumerate}
+                    \item Use \emph{annotation}\texttt{\_continuation}, replacing \emph{annotation} with the type name of the continued annotation, e.g. \texttt{Event\_continuation}.
+                    \item Annotation continuations must not be interrupted by a complete annotation of the same type.
+                \end{enumerate}
+            \item Annotation spans may fail to provide all relevant information and remain valid only if nearby contextual information relieves the insufficiency.
+        \end{enumerate}
+
+
+    \subsubsection{EAUs}
+    \textbf{Every \emph{EAU}}:
+        \begin{enumerate}
+            \item must consist of the nearest pair of annotations for which both spans satisfy their respective conditions, except:
+                \begin{enumerate}
+                    \item when an attribution is repeated in such a way that does not seem to be merely sentence repair (e.g. stuttering, clarification, etc.)
+                    % TODO: start a "common mistakes" section and put this in it -> \item When the same \emph{event} is mentioned multiple times, for which an \emph{attribution} is given only once, only the nearer text span will be included, \emph{provided} the nearer span does not significantly rely on contextual information to meet it's other conditions.
+                \end{enumerate}
+            \item must not overlap in its event and attribution spans.
+        \end{enumerate}
 
 \end{document}
