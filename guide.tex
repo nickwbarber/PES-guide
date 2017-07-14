@@ -51,7 +51,7 @@ While we do attempt to follow this definition as closely as possible, we find th
 \begin{enumerate}
     \item The \emph{event} must have been mentioned during conversation.
     \item The \emph{event} must have been expressed with a complete sentence spoken in conversation.
-    \item The \emph{event} must be in the form of a complete sentence or otherwise corefer with a complete sentence expressing such event.
+    \item The \emph{event} must be in the form of a complete sentence or otherwise corefer with a complete sentence present in the transcript expressing such event.
     \item The \emph{event} must \emph{propose} an \emph{event}.
     \item The form of the \emph{event} must be essentially similar to that of some expression of the \emph{proposition} of that \emph{event}. % TODO: give examples as reasons
     \item The individual is not determined to have experienced the event solely by means of a generic statement. e.g. not ``Teachers often feel stressed'' even when the individual is a teacher.
@@ -59,9 +59,10 @@ While we do attempt to follow this definition as closely as possible, we find th
 \end{enumerate}
 Some definitions:
 \begin{description}
-    \item[propose, \emph{also \emph{proposition}, etc.}] to make a statement about something which could be evaluated as either \emph{true} or \emph{false}. e.g. \emph{a bell rang repeatedly}, but not just \emph{a bell} or \emph{to ring} or \emph{repeatedly}.
-    \item[corefer, \emph{also \emph{coreference}, etc.}] to share a single reference. e.g. ``\emph{Paul} had a great time" and ``\emph{He}'s always in a good mood."
-    \item[]
+    \item[propose, \emph{also \emph{proposition}, etc.}] to make a statement about something which could be evaluated as either \emph{true} or \emph{false},
+        e.g. \emph{a bell rang repeatedly}, but not just \emph{a bell} or \emph{to ring} or \emph{repeatedly}.
+    \item[corefer, \emph{also \emph{coreference}, etc.}] to share a single reference,
+        e.g. ``\emph{Paul} had a great time" and ``\emph{He}'s always in a good mood."
 \end{description}
 
 \pagebreak
@@ -94,6 +95,28 @@ Some definitions:
 
 \pagebreak
 \section{Annotating Event-Attribution Units and their Features}
+    For \textbf{every \emph{event} annotation}:
+        \begin{enumerate}
+            \item The \emph{event} must have been mentioned during the given conversation.
+            \item The \emph{event} must have been expressed by means of a complete sentence within the conversation.
+            \item The text span that expresses the \emph{event} must be in the form of a complete sentence or otherwise \emph{corefer} with a complete sentence present in the transcript expressing such event.
+            \item The text span that expresses the \emph{event} must \emph{propose} that \emph{event} and nothing else. % TODO: give examples as reasons
+            \item Experience of the \emph{event} by the participant must not rely solely on a generic statement.
+                e.g. not ``Teachers often feel stressed'' even if the individual is in fact a teacher.
+            \item The text span expressing the \emph{event} must be the minimal length necessary to satisfy all other conditions.
+        \end{enumerate}
+
+    For \textbf{every \emph{attribution} annotation}:
+        \begin{enumerate}
+            \item The \emph{attribution} must have been mentioned during conversation.
+            \item The \emph{attribution} must have been expressed with a complete sentence spoken in conversation.
+            \item The \emph{attribution} must be in the form of a complete sentence or otherwise corefer with a complete sentence present in the transcript expressing such event.
+            \item The \emph{attribution} must \emph{propose} an \emph{event}.
+            \item The form of the \emph{event} must be essentially similar to that of some expression of the \emph{proposition} of that \emph{event}. % TODO: give examples as reasons
+            \item The individual is not determined to have experienced the event solely by means of a generic statement. e.g. not ``Teachers often feel stressed'' even when the individual is a teacher.
+            \item \emph{Events} must be the minimal length necessary to satisfy all other given conditions.
+        \end{enumerate}
+
     For \textbf{every annotation} made:
         \begin{enumerate}
             \item \textbf{Annotations may be non-contiguous}.

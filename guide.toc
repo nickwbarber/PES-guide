@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.3}Pervasive v. Specific}{4}
 \contentsline {subsection}{\numberline {2.4}Summary}{4}
 \contentsline {section}{\numberline {3}Annotating Event-Attribution Units and their Features}{5}
-\contentsline {subsection}{\numberline {3.1}Phase 1A: Event spans}{5}
-\contentsline {subsection}{\numberline {3.2}Phase 1B: Event polarity}{5}
-\contentsline {subsection}{\numberline {3.3}Phase 2: Attribution spans}{5}
-\contentsline {subsection}{\numberline {3.4}Phase 3: Attribution dimensionality}{5}
+\contentsline {subsection}{\numberline {3.1}Phase 1A: Event spans}{6}
+\contentsline {subsection}{\numberline {3.2}Phase 1B: Event polarity}{6}
+\contentsline {subsection}{\numberline {3.3}Phase 2: Attribution spans}{6}
+\contentsline {subsection}{\numberline {3.4}Phase 3: Attribution dimensionality}{6}
