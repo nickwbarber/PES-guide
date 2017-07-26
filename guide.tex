@@ -2,6 +2,7 @@
 
 \usepackage{verbatim}
 \usepackage{booktabs} 
+\usepackage{nameref}
 \usepackage{tabularx}
 \usepackage{caption}
 \usepackage{gb4e}
@@ -49,24 +50,7 @@ Seligman provides a fairly comprehensive definition of what is meant by \emph{ev
     Events that have good and bad elements, neutral events or events that do not affect the \emph{S} [the individual] should not be extracted.
 \end{quote}
 
-\pagebreak
-While we do attempt to follow this definition as closely as possible, we find that it is easier to reproduce similarly formed \emph{events} in our own verbatim transcripts by requiring several conditions be true about our events, in addition to the definition given above:
-\begin{enumerate}
-    \item The \emph{event} must have been mentioned during conversation.
-    \item The \emph{event} must have been expressed with a complete sentence spoken in conversation.
-    \item The \emph{event} must be in the form of a complete sentence or otherwise corefer with a complete sentence present in the transcript expressing such event.
-    \item The \emph{event} must \emph{propose} an \emph{event}.
-    \item The form of the \emph{event} must be essentially similar to that of some expression of the \emph{proposition} of that \emph{event}. % TODO: give examples as reasons
-    \item The individual is not determined to have experienced the event solely by means of a generic statement. e.g. not ``Teachers often feel stressed'' even when the individual is a teacher.
-    \item \emph{Events} must be the minimal length necessary to satisfy all other given conditions.
-\end{enumerate}
-Some definitions:
-\begin{description}
-    \item[propose, \emph{also \emph{proposition}, etc.}] to make a statement about something which could be evaluated as either \emph{true} or \emph{false},
-        e.g. \emph{a bell rang repeatedly}, but not just \emph{a bell} or \emph{to ring} or \emph{repeatedly}.
-    \item[corefer, \emph{also \emph{coreference}, etc.}] to share a single reference,
-        e.g. ``\emph{Paul} had a great time" and ``\emph{He}'s always in a good mood."
-\end{description}
+While we do attempt to follow this definition as closely as possible, we find that it is easier to reproduce similarly formed \emph{events} from our own transcripts by requiring that several conditions be true about our annotations in addition to those given in Seligman's guidelines. Those conditions are located in section \ref{conditions} on page \pageref{conditions}.
 
 \pagebreak
 \subsection{Attributions}
@@ -121,7 +105,14 @@ Some definitions:
         \end{enumerate}
 
     \newpage
-    \subsection{Annotation conditions}
+    \subsection{Annotation conditions} \label{conditions}
+        Some definitions:
+        \begin{description}
+            \item[propose, \emph{also \emph{proposition}, etc.}] to make a statement about something which could be evaluated as either \emph{true} or \emph{false},
+                e.g. \emph{a bell rang repeatedly}, but not just \emph{a bell} or \emph{to ring} or \emph{repeatedly}.
+            \item[corefer, \emph{also \emph{coreference}, etc.}] to share a single reference,
+                e.g. ``\emph{Paul} had a great time" and ``\emph{He}'s always in a good mood."
+        \end{description}
     \subsubsection{Events}
     For every \textbf{\emph{event}} annotation:
         \begin{enumerate}
