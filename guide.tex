@@ -23,7 +23,7 @@
 
 \title{Explanatory Style Annotation Guide -- DRAFT}
 \author{HiLT Lab}
-\date{\today\\v0.5.1}
+\date{\today\\v0.5.2}
 \maketitle
 
 \tableofcontents
@@ -85,19 +85,41 @@ While we do attempt to follow this definition as closely as possible, we find th
 
     \subsection{Annotation Phases}
     \subsubsection{Phase 1: Event spans}
-    For every EAU identified:
+    Two annotators, individually:
         \begin{enumerate}
-            \item Annotate text span of the event as type \texttt{Event}.
+            \item Annotate the most appropriate text span of each event they identify as part of an EAU as type \texttt{Event}.
+        \end{enumerate}
+    Consensus procedure:
+        \begin{enumerate}
+            \item Annotators discuss each given annotation and copy to the consensus set those for which they agree meet all given annotation conditions, including the existence of an associated attribution.
+                \begin{enumerate}
+                    \item Annotators may resolve to include any annotation (whether it have been made during individual annotation or not) in the consensus set that they may happen to notice during discussion which they deem appropriate to its definition.
+                \end{enumerate}
+        \end{enumerate}
+
+
+    \subsubsection{Phase 1B: Event polarity}
+    One annotator:
+        \begin{enumerate}
+            \item Annotates the polarity of each event given in the consensus set from Phase 1 as either \texttt{Positive} or \texttt{Negative} as a feature of the annotation.
         \end{enumerate}
 
     \subsubsection{Phase 2: Attribution spans}
-    For every event within the given consensus set:
+    Two annotators, individually:
         \begin{enumerate}
-            \item Annotate text span of the associated attribution as type \texttt{Attribution}.
+            \item Annotates, for every \texttt{Event} annotation from Phase 1B, the text span of every associated attribution as type \texttt{Attribution}.
                 \begin{enumerate}
-                    \item Annotate the identification number of the associated event as a feature, \texttt{Caused\_Event\_ID}.
+                    \item Provide the ID number of the associated event as a feature, \texttt{Caused\_Event}.
                 \end{enumerate}
         \end{enumerate}
+    Consensus procedure:
+        \begin{enumerate}
+            \item Annotators discuss each given annotation and copy to the consensus set those for which they agree meet all given annotation conditions.
+                \begin{enumerate}
+                    \item Annotators may resolve to include any annotation (whether it have been made during individual annotation or not) in the consensus set that they may happen to notice during discussion which they deem appropriate to its definition.
+                \end{enumerate}
+        \end{enumerate}
+
     \subsubsection{Phase 3: Attribution dimensionality}
     For every attribution within the given consensus set:
         \begin{enumerate}
