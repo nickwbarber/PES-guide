@@ -23,7 +23,7 @@
 
 \title{Explanatory Style Annotation Guide -- DRAFT}
 \author{HiLT Lab}
-\date{\today\\v0.6}
+\date{\today\\v0.6.1}
 \maketitle
 
 \tableofcontents
@@ -41,7 +41,7 @@ EAUs are the conjunction of an \emph{event} and an \emph{attribution} that expla
 
 \subsection{Events}
 
-Seligman provides a fairly comprehensive definition of what is meant by \emph{event} in his annotation guidelines: % TODO: cite, revise "his"
+Seligman provides a definition of what is meant by \emph{event} in his annotation guidelines: % TODO: cite, revise "his"
 
 \begin{quote}
     An event is defined as any stimulus that occurs in an individual's environment or within that individual (e.g. thoughts or feelings) that has a good or bad effect from the individual's point of view.
@@ -50,7 +50,7 @@ Seligman provides a fairly comprehensive definition of what is meant by \emph{ev
     Events that have good and bad elements, neutral events or events that do not affect the \emph{S} [the individual] should not be extracted.
 \end{quote}
 
-While we do attempt to follow this definition as closely as possible, we find that it is easier to reproduce similarly formed \emph{events} from our own transcripts by requiring that several conditions be true about our annotations in addition to those given in Seligman's guidelines. Those conditions are located in section \ref{conditions} on page \pageref{conditions}.
+While we do attempt to follow this definition as closely as possible, we find that it is easier to reproduce similarly formed \emph{events} from our own transcripts by adding several conditions to our annotations (\S \ref{conditions}) to those given in Seligman's guidelines.
 
 \pagebreak
 \subsection{Attributions}
@@ -85,69 +85,55 @@ While we do attempt to follow this definition as closely as possible, we find th
 
     \subsection{Annotation Phases}
     \subsubsection{Phase 1: Event spans}
-    Two annotators, individually:
+    \paragraph{Individual Annotation}
         \begin{enumerate}
-            \item Annotate the most appropriate text span of each event they identify as part of an EAU as type \texttt{Event}.
+            \item At least two annotators annotate the most appropriate text span of each event that they identify as part of an EAU, labeling each as type \texttt{Event}.
         \end{enumerate}
-    Consensus procedure:
+    \paragraph{Consensus Annotation}
         \begin{enumerate}
-            \item Annotators discuss each given annotation and copy to the consensus set those for which they agree meet all given annotation conditions, including the existence of an associated attribution.
+            \item Annotators discuss each given annotation and copy to the consensus set those which they agree meet all given annotation conditions, including the existence of an associated attribution.
                 \begin{enumerate}
-                    \item Annotators may resolve to include any annotation (whether it have been made during individual annotation or not) in the consensus set that they may happen to notice during discussion which they deem appropriate to its definition.
+                    \item Annotators may decide to include any appropriate annotation (whether it be made during individual annotation or not) in the consensus set that they may happen to notice during discussion.
                 \end{enumerate}
         \end{enumerate}
 
 
     \subsubsection{Phase 1B: Event polarity}
-    One annotator:
+    \paragraph{Individual Annotation}
         \begin{enumerate}
-            \item Annotates the polarity of each event given in the consensus set from Phase 1 as either \texttt{Positive} or \texttt{Negative} as a feature of the annotation.
+            \item One annotator annotates the polarity of each \texttt{Event} given in the consensus set from Phase 1 as either \texttt{Positive} or \texttt{Negative} as a feature of the annotation.
         \end{enumerate}
 
     \subsubsection{Phase 2: Attribution spans}
-    Two annotators, individually:
+    \paragraph{Individual Annotation}
         \begin{enumerate}
-            \item Annotate, for every \texttt{Event} annotation from Phase 1B, the text span of every associated attribution as type \texttt{Attribution}.
+            \item For every \texttt{Event} annotation from Phase 1B, two annotators individually annotate the text span of every associated attribution as type \texttt{Attribution}.
                 \begin{enumerate}
                     \item Provide the ID number of the associated event as a feature, \texttt{Caused\_Event}.
                 \end{enumerate}
         \end{enumerate}
-    Consensus procedure:
+    \paragraph{Consensus Annotation}
         \begin{enumerate}
             \item Annotators discuss each given annotation and copy to the consensus set those for which they agree meet all given annotation conditions.
                 \begin{enumerate}
-                    \item Annotators may resolve to include any annotation (whether it have been made during individual annotation or not) in the consensus set that they may happen to notice during discussion which they deem appropriate to its definition.
+                    \item Annotators may decide to include any appropriate annotation (whether it be made during individual annotation or not) in the consensus set that they may happen to notice during discussion.
                 \end{enumerate}
         \end{enumerate}
 
     \subsubsection{Phase 3: Attribution dimensionality}
-    For every attribution within the given consensus set:
+    \paragraph{Individual Annotation}
+    
         \begin{enumerate}
-            \item Annotate values for each of the three dimensions as features, \texttt{Personal--External}, \texttt{Permanent--Temporary}, \texttt{Pervasive--Specific}, each with a digit betwen \texttt{1} and \texttt{7}.
+            \item For every \texttt{Attribution} within the given consensus set, at least two annotators annotate values for each of the three dimensions, \texttt{Personal--External}, \texttt{Permanent--Temporary}, \texttt{Pervasive--Specific}, as features, using a digit between \texttt{1} and \texttt{7}.
         \end{enumerate}
-    \noindent Some tips regarding the annotation of the three dimensions:
+    \paragraph{Consensus Annotation}
         \begin{enumerate}
-        \item Internality
-            \begin{description}
-                \item[Who is to blame? Who takes the credit?] In answering the question, ``What degree of internality/externality is present in this Attribution?" you will necessarily be answering the question, ``According to the speaker, who/what is to blame (in the case of a negative event) or who/what should take credit (in the case of a positive event) for the associated Event?"
-            \end{description}
-        \item Stability
-            \begin{description}
-                \item[Temporally constrained Attributions, temporally abstracted Events] When annotating the stability of an Attribution, you are essentially annotating the likelihood that the Attribution will be considered a cause of the Event by the speaker if the Event were to happen again.
-
-                    In answering this question, it will be necessary to hypothesize about future occurences of the Event, but be careful not to extend this hypothetical way of thinking to the Attribution itself. That is to say that in answering this question, your mental model should consider the Attribution constrained to the particular instance mentioned in time, but consideration of the Event should be abstracted to all possible future occurences of the Event, regardless of how unlikely it really would be to happen again.
-            \end{description}
-        \item Globality
-            \begin{description}
-                \item[Avoid considering butterfly effects] Annotating Globality essentially is answering the question, ``How wide is the scope of things believed to be affected by this Attribution?" Inevitably, some Attributions have little prior commentary to rely on in answering this, in which case Seligman's guidelines prompt you to mentally model an average person as a surrogate to gauge the Attribution's effects on.
-
-                    When doing this, try only to count the obvious immediately following effects and not all of what might be likely chain reactions of each of those effects. For example, if given an Attribution to the effect of ``They're changing my blood pressure medication," the only obvious domain in which that plays a major, immediate role is the speaker's physical health, though a wide range of future changes might possibly or probably change as a result. However, the majority of these further effects would likely only be a result of whatever physical change the medication brings about, and not the change in medication itself, therefore the Attribution ought to be considered more Specific than Global.
-
-                    All this isn't to say that an Attribution with an otherwise narrow scope of effect could never be annotated as more pervasive; if you believe the speaker believes it's pervasive, mark it as such.
-            \end{description}
+            \item Annotators discuss each given annotation and copy to the consensus set those which they agree meet all given annotation conditions.
+                \begin{enumerate}
+                    \item Annotators may decide to include any appropriate annotation (whether it be made during individual annotation or not) in the consensus set that they may happen to notice during discussion.
+                \end{enumerate}
         \end{enumerate}
 
-    \newpage
     \subsection{Annotation span conditions} \label{conditions}
         Some definitions:
         \begin{description}
@@ -206,5 +192,61 @@ While we do attempt to follow this definition as closely as possible, we find th
             \item must not overlap in its event and attribution spans.
             \item given a contiguous series of similar events which an attribution or series of attributions with similar internality explains, annotate a single event attribution grouping like events as a single event and like attributions as a single attribution.
         \end{enumerate}
+
+
+    \subsection{Annotation tips}
+
+    \subsubsection{EAUs}
+    \begin{description}
+        \item[Daisy-chaining] It is acceptable for the same span of text to be selected as the caused \texttt{Event} in one EAU and separately as an \texttt{Attribution} as part of a different EAU.
+            \begin{description}
+                \item[\emph{Example:}]\mbox{}\\
+                \textbf{E:} I just had a thirty minute panic attack.\\ 
+                \textbf{A:} My credit card was not where I usually keep it.\\
+                \textbf{E:} My credit card was not where I usually keep it.\\
+                \textbf{A:} I had changed the location.
+            \end{description}
+    \end{description}
+    \begin{description}
+        \item[Concept repetition] It is acceptable to annotate the same conceptual EAU as many times as it is mentioned, but not when it seems only to have been repeated for the sake of conversational clarity.
+    \end{description}
+
+    \subsubsection{Attribution Dimensions}
+    \begin{enumerate}
+    \item Internality
+        \begin{description}
+            \item[Who is to blame? Who takes the credit?] In answering the question, ``What degree of internality/externality is present in this Attribution?" you will necessarily be answering the question, ``According to the speaker, who/what is to blame (in the case of a negative event) or who/what should take credit (in the case of a positive event) for the associated Event?"
+                
+            If there seems to be more than just the speaker responsible for a given event, try to identify who has more focus, and adjust annotation accordingly. A heuristic for identifying who has more focus is identifying which of those responsible are mentioned first.
+                \begin{description}
+                \item[\emph{Example:}]\mbox{}\\
+                \textbf{E:} The house looks marvelous.\\ 
+                \textbf{A:} I had the cleaning ladies over.\\
+                \texttt{Internality:5/7}; ``I" has more focus than ``the cleaning ladies."
+                \end{description}
+                \begin{description}
+                \item[\emph{Example:}]\mbox{}\\
+                \textbf{E:} The house looks marvelous.\\ 
+                \textbf{A:} The cleaning ladies came over.\\
+                        \texttt{Internality:3/7}; Though the cleaning ladies are the only ones explicitly mentioned, it is understood within the context that the speaker must have taken some action for them to come over at all, therefore precluding annotation from being \emph{highly} external.  
+                \end{description}
+        \end{description}
+
+    \item Stability
+        \begin{description}
+            \item[Temporally constrained Attributions, temporally abstracted Events] When annotating the stability of an Attribution, you are essentially annotating the likelihood that the Attribution will be considered a cause of the Event by the speaker if the Event were to happen again.
+
+                In answering this question, it will be necessary to hypothesize about future occurences of the Event, but be careful not to extend this hypothetical way of thinking to the Attribution itself. That is to say that in answering this question, your mental model should consider the Attribution constrained to the particular instance mentioned in time, but consideration of the Event should be abstracted to all possible future occurences of the Event, regardless of how unlikely it really would be to happen again.
+        \end{description}
+
+    \item Globality
+        \begin{description}
+            \item[Avoid considering butterfly effects] Annotating Globality essentially is answering the question, ``How wide is the scope of things believed to be affected by this Attribution?" Inevitably, some Attributions have little prior dialogue to rely on in answering this, in which case Seligman's guidelines prompt you to mentally model an average person as a surrogate to gauge the Attribution's effects on.
+
+                When doing this, try only to count the obvious immediately following effects and not all of what might be likely chain reactions of each of those effects. For example, if given an Attribution to the effect of ``They're changing my blood pressure medication," the only obvious domain in which that plays a major, immediate role is the speaker's physical health, though a wide range of future changes might possibly or probably change as a result. However, the majority of these further effects would likely only be a result of whatever physical change the medication brings about, and not the change in medication itself, therefore the Attribution ought to be considered more Specific than Global.
+
+                All this isn't to say that an Attribution with an otherwise narrow scope of effect could never be annotated as more pervasive; if you believe that the speaker believes it's pervasive, mark it as such.
+        \end{description}
+    \end{enumerate}
 
 \end{document}
