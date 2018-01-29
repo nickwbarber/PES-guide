@@ -23,7 +23,7 @@
 
 \title{Explanatory Style Annotation Guide -- DRAFT}
 \author{HiLT Lab}
-\date{\today\\v0.8}
+\date{\today\\v0.8.1}
 \maketitle
 
 \tableofcontents
@@ -34,14 +34,14 @@ A consistently pessimistic \emph{explanatory style}, for example, can help indic
 The ability to detect these explanations, and consequently describe a person's explanatory style, is therefore a valuable skill for therapy-minded Companionbots since it lets them know when and about what to start a therapeutic dialogue.
 
 \section{Event Attribution Units (EAUs)}
-In order to describe a person's explanatory style, we need a sample of how they explain things that happen to them (particularly things about which the person has a non-neutral opinion). % TODO: briefly describe CAVE analysis and difference from questionnaire
-This sample is made up of a set of \emph{event-attribution units}\footnote{\label{CAVE}appendix of CAVE paper, with guidelines} (EAUs) and some descriptive features about them. % TODO: citation needed
-EAUs are the conjunction of an \emph{event} and an \emph{attribution} that explains the existence of the event.
+In order to describe a person's explanatory style, we need a sample of how that person explains things that happen to them, particularly things about which the person has a non-neutral opinion. % TODO: briefly describe CAVE analysis and difference from questionnaire
+This sample will be made up of a set of \emph{event-attribution units}\footnote{\label{CAVE}appendix of CAVE paper, with guidelines} (EAUs) and some descriptive features about them. % TODO: citation needed
+EAUs are the conjunction of an \emph{event} and an \emph{attribution} which explains the existence of that event.
 
 
 \subsection{Events}
 
-Seligman provides a definition of what is meant by \emph{event} in his annotation guidelines: % TODO: cite, revise "his"
+Schulman, Castellon, and Seligman provide a definition of \emph{event} in their annotation guidelines\footnote{see footnote \ref{CAVE}}: % TODO: cite, revise "his"
 
 \begin{quote}
     An event is defined as any stimulus that occurs in an individual's environment or within that individual (e.g. thoughts or feelings) that has a good or bad effect from the individual's point of view.
@@ -50,7 +50,7 @@ Seligman provides a definition of what is meant by \emph{event} in his annotatio
     Events that have good and bad elements, neutral events or events that do not affect the \emph{S} [the individual] should not be extracted.
 \end{quote}
 
-While we do attempt to follow this definition as closely as possible, we find that it is easier to reproduce similarly formed \emph{events} from our own transcripts by adding several conditions to our annotations (\S \ref{conditions}) to those given in Seligman's guidelines.
+While we do attempt to follow this definition as closely as possible, we find that it is easier to reproduce similarly formed \emph{events} from our own transcripts by adding several conditions to our annotations (\S \ref{conditions}), supplementing those outlined in Schulman et al's guidelines.
 
 \pagebreak
 \subsection{Attributions}
@@ -82,6 +82,8 @@ While we do attempt to follow this definition as closely as possible, we find th
 
 \pagebreak
 \section{Annotating Event-Attribution Units and their Features}
+
+This section assumes that the annotator has read and understood the previously referenced annotation guidelines from which these take inspiration. Nothing within this section should be construed to negate anything within those guidelines unless clearly intended.
 
     \subsection{Annotation Phases}
     \subsubsection{Phase 1: Event spans}
@@ -151,20 +153,20 @@ While we do attempt to follow this definition as closely as possible, we find th
             \item The event must have been or otherwise be very probable to have been evaluated as either good or bad by subject in terms of its effects on the subject.
             \item The text span that expresses the \emph{event} must be in the form of a complete sentence or otherwise unambiguously \emph{corefer} with a complete sentence present in the transcript expressing such event when no other non-pronoun mention of the event appears within the same \emph{turn} as the otherwise most appropriate event mention.
             \item The text span that expresses the \emph{event} must primarily \emph{propose} that event. %...", and nothing else."? % TODO: give examples as reasons
-            \item Experience of the \emph{event} by the participant must not rely solely on a generic statement.
+            \item Experience of the \emph{event} by the participant must not rely solely on a generic statement,
                 e.g. not ``Teachers often feel stressed'' even if the individual is in fact a teacher.
-            \item The text span expressing the \emph{event} must be the minimal length necessary to satisfy all other conditions.
+            \item The text span expressing the \emph{event} must be the minimal length necessary to satisfy all preceding conditions.
         \end{enumerate}
 
 
     \subsubsection{Attributions}
     For every \textbf{\emph{attribution}} annotation:
         \begin{enumerate}
-            \item The \emph{attribution} must have been mentioned during conversation.
-            \item The text span that expresses the \emph{attribution} must primarily \emph{suggest} that attribution. %...", and nothing else."?
-            \item \emph{Events} must be the minimal length necessary to satisfy all other conditions.
+            \item The \emph{attribution} must have been mentioned explicitly during conversation.
+            \item The text span that expresses the \emph{attribution} must primarily suggest that attribution. %...", and nothing else."?
             \item The causal relationship identified between the attribution and its associated event must have clearly been intended to have been communicated.
-            \item The internality dimension of the attribution must be unambiguously agentive, i.e. the attribution must be caused at least in part by some internal or external entity (or a mix of both).
+            \item The internality dimension of the attribution must be unambiguously agentive, i.e. the attribution must be caused at least in part by some entity.
+            \item \emph{Attribution} annotations must be the minimal length necessary to satisfy all preceding conditions.
         \end{enumerate}
 
 
@@ -177,20 +179,20 @@ While we do attempt to follow this definition as closely as possible, we find th
                     \item Annotation continuations must not be interrupted by a complete annotation of the same type.
                 \end{enumerate}
             \item Annotation spans may fail to provide all relevant information and remain valid only if nearby contextual information relieves the insufficiency.
-            \item Avoid annotating sentence-ending punctuation at annotation boundaries.
+            \item Avoid creating an annotation such that sentence-ending punctuation falls within and at the end of the annotation.
         \end{enumerate}
 
 
     \subsubsection{EAUs}
     \textbf{Every \emph{EAU}}:
         \begin{enumerate}
-            \item must consist of the nearest pair of annotations for which both spans satisfy their respective conditions, except:
+            \item must consist of only the nearest pair of Event and Annotation mentions which each satisfy their respective conditions, except:
                 \begin{enumerate}
-                    \item when an attribution is repeated in such a way that does not seem to be merely sentence repair (e.g. stuttering, clarification, etc.)
+                    \item when an attribution is repeated in such a way that does not seem to merely be a repair (e.g. stuttering, clarification, etc.). In such cases, annotate the Event using one span, and annotate each Attribution with separate spans, each referring back to the same Event span.
                     % TODO: start a "common mistakes" section and put this in it -> \item When the same \emph{event} is mentioned multiple times, for which an \emph{attribution} is given only once, only the nearer text span will be included, \emph{provided} the nearer span does not significantly rely on contextual information to meet it's other conditions.
                 \end{enumerate}
             \item must not overlap in its event and attribution spans.
-            \item given a contiguous series of similar events which an attribution or series of attributions with similar internality explains, annotate a single event attribution grouping like events as a single event and like attributions as a single attribution.
+            \item given a contiguous series of similar events which an attribution or series of attributions with similar internality explains, annotate a single event attribution, grouping like events into a single event span and like attributions into a single attribution span.
         \end{enumerate}
 
 
@@ -212,6 +214,11 @@ While we do attempt to follow this definition as closely as possible, we find th
     \end{description}
     \begin{description}
         \item[Conversational politeness] Sometimes people say things only out of a sense of politeness, e.g. apologizing for a minor disruption in conversation. If you get the sense that a remark was only made out of an effort to save or maintain face, or does not otherwise represent a sincerely felt effect, do not consider it an Event.
+            \begin{description}
+                \item[\emph{Example:}]\mbox{}\\
+                \textbf{E:} I'm sorry\\ 
+                \textbf{A:} I couldn't answer your call.\\
+            \end{description}
             
         \emph{NB}: This proscription does not preclude the possibility that some polite speech acts might indicate the sincerely felt effects of an Event.
     \end{description}
@@ -266,7 +273,7 @@ While we do attempt to follow this definition as closely as possible, we find th
                 \textbf{A:} because of my ADHD.\\
                 \texttt{Stability:7/7}; Even if the speaker is not likely to remain a student for much longer, which would make it very unlikely that this Event would ever happen again, the Attribution must be analyzed within the context of the Event \emph{actually happening}.
                 \end{description}
-            \item[Instances, not patterns] Be careful not to annotate only the pattern underlying a given event rather than whatever is actually mentioned:
+            \item[Consider phrasing] When annotating attribution dimensions, consider the way the person decided to phrase the attribution.
                 \begin{description}
                 \item[\emph{Example:}]\mbox{}\\
                 \textbf{E:} I can't keep up at Bingo\\ 
@@ -286,9 +293,9 @@ While we do attempt to follow this definition as closely as possible, we find th
 
     \item Globality
         \begin{description}
-            \item[Avoid considering butterfly effects] Annotating Globality essentially is answering the question, ``How wide is the scope of things believed to be affected by this Attribution?" Inevitably, some Attributions have little prior dialogue to rely on in answering this, in which case Seligman's guidelines prompt you to mentally model an average person as a surrogate to gauge the Attribution's effects on.
+            \item[Avoid considering butterfly effects] Annotating Globality essentially is answering the question, ``How wide is the scope of things believed to be affected by this Attribution?" Inevitably, some Attributions have little prior dialogue to rely on in answering this, in which case Schulman et al's guidelines prompt you to mentally model an average person as a surrogate upon which to gauge the Attribution's effects.
 
-                When doing this, try only to count the obvious immediately following effects and not all of what might be likely chain reactions of each of those effects. For example, if given an Attribution to the effect of ``They're changing my blood pressure medication," the only obvious domain in which that plays a major, immediate role is the speaker's physical health, though a wide range of future changes might possibly or probably change as a result. However, the majority of these further effects would likely only be a result of whatever physical change the medication brings about, and not the change in medication itself, therefore the Attribution ought to be considered more Specific than Global.
+                When doing this, try to only count the obvious immediately following effects and not all of what might likely be chain reactions of each of those effects. For example, if given an Attribution to the effect of ``They're changing my blood pressure medication," the only obvious domain in which that plays a major, immediate role is the speaker's physical health, though a wide range of future changes might possibly or probably change as a result. However, the majority of these further effects would likely only be a result of whatever physical change the medication brings about, and not the change in medication itself, therefore the Attribution ought to be considered more Specific than Global.
 
                 All this isn't to say that an Attribution with an otherwise narrow scope of effect could never be annotated as more pervasive; if you believe that the speaker believes it's pervasive, mark it as such.
         \end{description}
