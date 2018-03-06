@@ -23,7 +23,7 @@
 
 \title{Explanatory Style Annotation Guide -- DRAFT}
 \author{HiLT Lab}
-\date{\today\\v0.8.1}
+\date{\today\\v0.8.2}
 \maketitle
 
 \tableofcontents
@@ -31,7 +31,7 @@
 
 Research suggests that the way that people explain things that happen in their lives can be revealing.\footnote{\label{seligman89}Schulman, P., Castellon, C., \& Seligman, M. (1989). Assessing explanatory style: The content analysis of verbatim explanations and the attributional style questionnaire. Behavior Research and Therapy, 27(5), 505-512} % TODO: try to find a more appropriate citation; preferably one that doesn't talk as much about the questionnaire (or perhaps just mention the questionnaire)
 A consistently pessimistic \emph{explanatory style}, for example, can help indicate depression.
-The ability to detect these explanations, and consequently describe a person's explanatory style, is therefore a valuable skill for therapy-minded Companionbots since it lets them know when and about what to start a therapeutic dialogue.
+The ability to detect these explanations, and consequently describe a person's explanatory style, is therefore a valuable skill for therapy-minded Companionbots since it lets them know when and about what to start therapeutic dialogue.
 
 \section{Event Attribution Units (EAUs)}
 In order to describe a person's explanatory style, we need a sample of how that person explains things that happen to them, particularly things about which the person has a non-neutral opinion. % TODO: briefly describe CAVE analysis and difference from questionnaire
@@ -54,42 +54,46 @@ While we do attempt to follow this definition as closely as possible, we find th
 
 \pagebreak
 \subsection{Attributions}
-\subsection{Examples}
 
-(...) He then goes on to give examples of good \emph{event-attribution units}: % TODO: reproduce examples
-\setcounter{magicrownumbers}{0}
-\begin{table}[h!]\centering
-    \ra{1.3}
-    \caption{Good EAUs.}
-    \label{table1}
-    \noindent\begin{tabularx}{\textwidth}{llX}
-        \toprule
-        & Event & Attribution \\
-        \midrule
-        \rownumber & I didn't do well on my exam & because I didn't sleep well last night. \\
-        \rownumber\label{ex_grad_prog} & I haven't been sleeping well & because I'm worried about getting into a good graduate program. \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
+Attributions are explanations that people give for the good and bad events that happen in their lives. These attributions are causal in nature, such that the attribution is described in a way that suggests it caused the event to happen.
 
-%I want to refer to example \ref{table1}.\ref{ex_grad_prog} %example_graduate_program
+For the purposes of our annotation, it is essential 1) that attributions be proposed by the subject who we are interested in (i.e. the one whose subjectivity we evaluate when deciding whether to classify a given event as either good or bad) and 2) that the causal relationship identified was clearly intended to be communicated as a feature of conversation.
 
-\section{Analyzing EAU dimensions}
-    \subsection{Personal v. External}
-    \subsection{Permanent v. Temporary}
-    \subsection{Pervasive v. Specific}
-    \subsection{Examples}
+%\subsection{Examples}
+%
+%(...) He then goes on to give examples of good \emph{event-attribution units}: % TODO: reproduce examples
+%\setcounter{magicrownumbers}{0}
+%\begin{table}[h!]\centering
+%    \ra{1.3}
+%    \caption{Good EAUs.}
+%    \label{table1}
+%    \noindent\begin{tabularx}{\textwidth}{llX}
+%        \toprule
+%        & Event & Attribution \\
+%        \midrule
+%        \rownumber & I didn't do well on my exam & because I didn't sleep well last night. \\
+%        \rownumber\label{ex_grad_prog} & I haven't been sleeping well & because I'm worried about getting into a good graduate program. \\
+%        \bottomrule
+%    \end{tabularx}
+%\end{table}
 
-\pagebreak
+%\section{Analyzing EAU dimensions}
+%    \subsection{Personal v. External}
+%    \subsection{Permanent v. Temporary}
+%    \subsection{Pervasive v. Specific}
+%    \subsection{Examples}
+
+%\pagebreak
+
 \section{Annotating Event-Attribution Units and their Features}
 
-This section assumes that the annotator has read and understood the previously referenced annotation guidelines from which these take inspiration. Nothing within this section should be construed to negate anything within those guidelines unless clearly intended.
+%This section assumes that the annotator has read and understood the previously referenced annotation guidelines from which these take inspiration. Nothing within this section should be construed to negate anything within those guidelines unless clearly intended.
 
     \subsection{Annotation Phases}
     \subsubsection{Phase 1: Event spans}
     \paragraph{Individual Annotation}
         \begin{enumerate}
-            \item At least two annotators annotate the most appropriate text span of each event that they identify as part of an EAU, labeling each as type \texttt{Event}.
+            \item At least two annotators annotate the most appropriate text span of each event that they identify to be part of an EAU, labeling each as type \texttt{Event}. Annotators will be provided an annotation document containing pre-made heuristic annotations. Only spans which overlap with any part of a sentence which contains a given heuristic annotation are eligible for annotation during this phase. 
         \end{enumerate}
     \paragraph{Consensus Annotation}
         \begin{enumerate}
